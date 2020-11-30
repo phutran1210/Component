@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Mousemove 3D Parallax Tilt Effect || Vanilla tilt.js">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Product Card</title>
+    <link rel="shortcut icon" href="/img/shoes7.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div data-tilt data-tilt-glare data-tilt-max-glare="0.8" class="card">
+        <h2 class="card__name">Product Name</h2>
+        <a class="card__buy" href="#">Buy Now</a>
+        <div class="card__circle"></div>
+        <img src="/img/shoes1.png" width="100%" alt="nike-shoe" class="card__product" />
+      </div>
+      <div data-tilt data-tilt-glare data-tilt-max-glare="0.8" class="card">
+        <h2 class="card__name">Product Name</h2>
+        <a class="card__buy" href="#">Buy Now</a>
+        <div class="card__circle"></div>
+        <img src="/img/shoes2.png" width="100%" alt="nike-shoe" class="card__product" />
+      </div>
+      <div data-tilt data-tilt-glare data-tilt-max-glare="0.8" class="card">
+        <h2 class="card__name">Product Name</h2>
+        <a class="card__buy" href="#">Buy Now</a>
+        <div class="card__circle"></div>
+        <img src="/img/shoes1.png" width="100%" alt="nike-shoe" class="card__product" />
+      </div>
+    </div>
+    <script src="/js/vanilla-tilt.min.js"></script>
+    <script>
+      VanillaTilt.init(document.querySelectorAll(".card"), {
+        max: 25,
+        speed: 400,
+      });
+    </script>
+  </body>
+</html>

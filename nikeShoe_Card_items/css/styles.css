@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap");
+
+/* #ff533d
+*  #00adb8
+*  #00adb8
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #131313;
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 1200px;
+  transform-style: preserve-3d;
+}
+
+.container .card {
+  margin: 40px;
+  width: 300px;
+  height: 400px;
+  background-color: #232323;
+  border-radius: 20px;
+  transform-style: preserve-3d;
+}
+.container .card::before {
+  content: "NIKE";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 5em;
+  font-weight: 900;
+  font-style: italic;
+  color: #ffffff;
+  opacity: 0;
+  transition: 0.5s;
+}
+.container .card::after {
+  content: "SHOES";
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 5em;
+  font-weight: 900;
+  font-style: italic;
+  color: #ffffff;
+  opacity: 0;
+  transition: 0.5s;
+}
+.container .card:hover::before,
+.container .card:hover::after {
+  opacity: 0.04;
+}
+
+.container .card .card__name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  transform: translate3d(0, 0, 0);
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 10;
+}
+.container .card:hover .card__name {
+  top: 40px;
+  opacity: 1;
+}
+
+.container .card .card__buy {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, 0, 75px);
+  color: #fff;
+  background: #333;
+  padding: 10px 25px;
+  border-radius: 30px;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0;
+  z-index: 10;
+}
+.container .card:hover .card__buy {
+  bottom: 30px;
+  opacity: 1;
+}
+
+.container .card .card__circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: 0.5s;
+  background-color: #fff;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, -50%, 50px);
+  opacity: 1;
+  z-index: 10;
+}
+
+.container .card .card__product {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  z-index: 11;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, -50%, 50px) rotate(15deg);
+}
+.container .card:hover .card__product {
+  transform: translate3d(-50%, -50%, 100px) rotate(15deg);
+}
+
+.container .card:nth-child(1) .card__circle,
+.container .card:nth-child(1) .card__buy {
+  background-color: #ff533d;
+}
+.container .card:nth-child(2) .card__circle,
+.container .card:nth-child(2) .card__buy {
+  background-color: #00adb8;
+}
+.container .card:nth-child(3) .card__circle,
+.container .card:nth-child(3) .card__buy {
+  background-color: #ff533d;
+}
